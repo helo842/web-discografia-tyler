@@ -1,0 +1,160 @@
+/* =========================================
+   ESTILO ESPECÍFICO: CHROMAKOPIA (chromakopia.css)
+   ========================================= */
+
+:root {
+    /* Paleta Militar / Sepia */
+    --bg-body: #F4EBD9;       /* Beige/Sepia claro (Papel antiguo) */
+    --color-texto: #1C1C1C;   /* Negro casi puro */
+
+    /* Header */
+    --bg-header: #1C1C1C;
+    --color-header: #F4EBD9;
+
+    /* Navegación */
+    --bg-nav: #0E2E18;        /* Verde Chroma Oscuro */
+    --color-nav: #F4EBD9;
+    
+    /* Footer */
+    --bg-footer: #0E2E18;
+    --color-footer: #F4EBD9;
+
+    /* Elementos */
+    --bg-btn: #00FF00;        /* Botón verde neón */
+    --color-btn: #000000;     /* Texto botón negro */
+    
+    /* CORRECCIÓN: Inputs estilo Terminal */
+    --bg-input: #1C1C1C;      /* Fondo negro para escribir */
+    --color-input: #00FF00;   /* Texto verde brillante */
+
+    --borde-radio: 0px;       /* Cuadrado estricto */
+}
+
+/* === TIPOGRAFÍA GLOBAL === */
+/* Estilo documento clasificado para toda la página */
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tipografía de encabezados */
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+/* === HEADER Y LOGO === */
+/* Corrección: Fondo claro para el logo para que resalte sobre el negro */
+header .logo {
+    background-color: transparent; /* Quitamos el fondo beige */
+    padding: 0;
+    border: none; /* Quitamos el borde verde */
+    /* El filtro drop-shadow crea un contorno claro alrededor de las figuras negras */
+    filter: drop-shadow(0px 0px 3px #F4EBD9) grayscale(100%); 
+    width: 300px; /* Aseguramos que mantenga su tamaño */
+}
+
+/* === SECCIÓN HERO (Portada) === */
+.hero-image-container {
+    background-color: #0E2E18;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #F4EBD9; /* Separador visual del menú */
+    border-bottom: 10px solid #1C1C1C;
+    /* Centrado flexible absoluto */
+    display: flex;          
+    justify-content: center;
+    align-items: center;
+}
+
+.chroma-cover-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    filter: sepia(100%) contrast(1.1);
+    border: 5px solid #F4EBD9;
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.5);
+}
+
+/* === SECCIONES GENERALES === */
+.chroma-section {
+    padding: 80px 20px;
+    background-color: var(--bg-body);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #0E2E18;
+    text-decoration: underline;
+}
+
+/* === TABLA DE TRACKLIST === */
+.chroma-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #1C1C1C;
+    border-collapse: collapse;
+}
+
+.chroma-table th {
+    background-color: #1C1C1C;
+    color: #00FF00; /* Texto verde terminal */
+    padding: 15px;
+    border: 1px solid #F4EBD9;
+}
+
+.chroma-table td {
+    padding: 12px;
+    border: 1px solid #1C1C1C;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.chroma-table tr:hover td {
+    background-color: #0E2E18;
+    color: #F4EBD9;
+    cursor: crosshair;
+}
+
+/* === SECCIÓN PERSONAJE (Corrección del error) === */
+/* Faltaba este contenedor para centrar la imagen del personaje */
+.character-image-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.character-image-box img {
+    width: 100%;
+    max-width: 400px; /* Tamaño controlado */
+    filter: grayscale(100%); /* St. Chroma en blanco y negro */
+    border: 10px solid #1C1C1C;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
+}
+
+/* === FOOTER Y FORMULARIOS === */
+/* Inputs estilo hacker/terminal */
+footer input, footer textarea {
+    border: 2px solid #00FF00 !important; /* Forzamos el borde verde */
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    background-color: var(--bg-input);
+    color: var(--color-input);
+}
+
+footer input::placeholder, footer textarea::placeholder {
+    color: #0E2E18; 
+    opacity: 0.7;
+}
+
+footer button {
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #00FF00; /* Borde verde al botón también */
+}

@@ -1,0 +1,185 @@
+/* =========================================
+   ESTILOS GLOBALES (global.css)
+   Sistema de Marcas y Estructura Base
+   ========================================= */
+
+:root {
+    /* --- VARIABLES BASE (Tema Default: Home/Tyler) --- */
+    
+    /* Colores Principales */
+    --bg-body: #FFF5E1;       /* Fondo beige */
+    --color-texto: #3E2723;   /* Texto marrón oscuro */
+    
+    /* Cabecera */
+    --bg-header: #FFF5E1;
+    --color-header: #3E2723;
+    --borde-header: 0px;      /* Sin borde por defecto */
+    
+    /* Navegación */
+    --bg-nav: #8CB8C4;        /* Azul grisáceo */
+    --color-nav: #FFF5E1;
+    --borde-nav: 0px;
+    
+    /* Footer */
+    --bg-footer: #5D4037;     /* Marrón tierra */
+    --color-footer: #FFF5E1;
+    --borde-footer: 0px;
+    
+    /* Elementos Interactivos (Inputs y Botones) */
+    --bg-input: #FFF5E1;
+    --color-input: #3E2723;
+    --bg-btn: #F4C2C2;        /* Rosa pastel */
+    --color-btn: #3E2723;
+    
+    /* Estética (Bordes y Decoración) */
+    --borde-radio: 25px;      /* Bordes redondeados por defecto */
+    --borde-input-radio: 8px; /* Radio específico para inputs */
+    --grosor-borde-elem: 0px; /* Bordes decorativos (como en img) */
+    --color-borde-elem: #3E2723;
+}
+
+/* === RESET Y BASE === */
+* {
+    box-sizing: border-box; /* Vital para maquetación */
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    /* Aplicamos las variables globales */
+    background-color: var(--bg-body);
+    color: var(--color-texto);
+}
+
+/* === HEADER (Encabezado) === */
+header {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    align-items: center;
+    padding: 0 40px; /* Unificado para que respire bien */
+    background-color: var(--bg-header);
+    color: var(--color-header);
+    border-bottom: var(--borde-header) solid var(--color-header); /* Solo visible si tiene grosor */
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo {
+    width: 300px;
+}
+
+/* === NAV (Menú de Navegación) === */
+nav {
+    display: flex;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--bg-nav);
+    color: var(--color-nav);
+    border-bottom: var(--borde-nav) solid var(--color-texto);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: inherit; /* Hereda del padre (nav) */
+    transition: all 0.3s ease;
+}
+
+/* === FOOTER (Pie de página) === */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--bg-footer);
+    color: var(--color-footer);
+    border-top: var(--borde-footer) solid var(--color-footer);
+}
+
+footer form {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    /* Si quieres que en Home no tenga borde el form, déjalo transparente o sin grosor */
+    /* Para simplificar, usaremos un borde sutil o ninguno en global, controlable luego */
+    border: var(--grosor-borde-elem) solid var(--color-footer); 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+footer input, footer textarea {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: var(--bg-input);
+    color: var(--color-input);
+    border-radius: var(--borde-input-radio);
+}
+
+footer input:focus, footer textarea:focus {
+    outline: 2px solid var(--bg-btn); /* Resalta con el color de botón */
+}
+
+footer button {
+    padding: 15px 40px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    transition: transform 0.2s, background-color 0.2s;
+    background-color: var(--bg-btn);
+    color: var(--color-btn);
+    border-radius: var(--borde-radio);
+}
+
+footer button:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1); /* Hace el color un pelín más claro */
+}
+
+.video-section {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border: var(--grosor-borde-elem) solid var(--color-borde-elem);
+    background-color: #000;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%; border: none;
+}

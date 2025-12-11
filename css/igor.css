@@ -1,0 +1,210 @@
+/* =========================================
+   ESTILO ESPECÍFICO: ÁLBUM IGOR (igor.css)
+   ========================================= */
+
+/* === OVERRIDE DE VARIABLES (Cambio de Tema) === */
+:root {
+    /* Paleta Brutalista IGOR (Negro y Rosa) */
+    --bg-body: #F3B0C3;       /* Rosa de fondo */
+    --color-texto: #000000;   /* Texto negro */
+
+    /* Header Invertido */
+    --bg-header: #000000;
+    --color-header: #F3B0C3;
+    --borde-header: 4px;      /* Borde grueso rosa */
+
+    /* Navegación */
+    --bg-nav: #F3B0C3;
+    --color-nav: #000000;
+    --borde-nav: 4px;         /* Borde negro bajo el menú */
+
+    /* Footer Invertido */
+    --bg-footer: #000000;
+    --color-footer: #F3B0C3;
+    --borde-footer: 4px;      /* Borde grueso rosa arriba */
+
+    /* Inputs y Botones */
+    --bg-input: #F3B0C3;
+    --color-input: #000000;
+    --bg-btn: #F3B0C3;
+    --color-btn: #000000;
+
+    /* Estética Cuadrada */
+    --borde-radio: 0px;       /* Elimina curvas */
+    --borde-input-radio: 0px; 
+    --grosor-borde-elem: 4px; /* Bordes gruesos para elementos */
+    --color-borde-elem: #000000;
+}
+
+/* === AJUSTES DE NAVEGACIÓN ESPECÍFICOS === */
+/* En IGOR los enlaces se inclinan y subrayan al pasar el ratón */
+nav a:hover {
+    transform: skewX(-10deg);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+/* En el header, al pasar ratón, el título se pone blanco */
+.link-home:hover h1 {
+    color: #ffffff;
+}
+
+/* === SECCIÓN HERO (Portada) === */
+.hero-image-container {
+    background-color: var(--bg-body);
+    padding: 40px 20px 0 20px;
+    text-align: center;
+}
+
+.igor-cover-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 4px solid #000000;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2); 
+}
+
+/* === ARTÍCULOS Y TEXTOS (Layout) === */
+.igor-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.igor-section h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 0px #ffffff;
+}
+
+.igor-section h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.text-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* === SECCIÓN PERSONAJE === */
+.character-container {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.character-image-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.character-image-box img {
+    width: 100%;
+    max-width: 400px;
+    border: 4px solid #000000;
+    box-shadow: -10px 10px 0px rgba(0,0,0,0.2);
+}
+
+/* === TABLA DE TRACKLIST === */
+.table-container {
+    overflow-x: auto;
+}
+
+.igor-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 4px solid #000000;
+    background-color: var(--bg-body);
+}
+
+.igor-table th, 
+.igor-table td {
+    border: 2px solid #000000;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.igor-table th {
+    background-color: #000000;
+    color: #F3B0C3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.igor-table strong {
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.note {
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.igor-table tr:hover td {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+/* === PREMIOS Y CITAS === */
+.award-box {
+    border: 4px solid #000000;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    background-color: #000000;
+    color: #F3B0C3;
+    text-align: left;
+}
+
+.award-box h3 {
+    color: #ffffff;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.quote {
+    font-style: italic;
+    border-left: 4px solid #F3B0C3;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+/* === AJUSTES DE FORMULARIO ESPECÍFICOS === */
+/* Aseguramos que el formulario tenga el borde visible definido en variables */
+footer form {
+    border: 2px solid var(--color-footer); 
+    padding: 40px;
+}
+
+/* Botón con borde visible en estado normal */
+footer button {
+    border: 2px solid var(--color-footer);
+}
+
+footer button:hover {
+    background-color: var(--color-footer); /* Se pone rosa */
+    color: var(--bg-footer); /* Texto negro */
+    transform: none; /* Quitamos el efecto de escala del global para ser más seco/brutalista */
+}

@@ -1,0 +1,139 @@
+/* =========================================
+   ESTILO ESPECÍFICO: CALL ME IF YOU GET LOST
+   ========================================= */
+
+:root {
+    /* Paleta ID Card / Pastel Vintage */
+    --bg-body: #FFF8E1;       /* Crema pálido (Papel antiguo) */
+    --color-texto: #3E2723;   /* Marrón oscuro (Texto máquina de escribir) */
+
+    /* Header */
+    --bg-header: #90A4AE;     /* Azul grisáceo (Pasaporte) */
+    --color-header: #FFF8E1;
+    --borde-header: 4px double #3E2723;
+
+    /* Navegación */
+    --bg-nav: #F8BBD0;        /* Rosa pastel suave */
+    --color-nav: #3E2723;
+    --borde-nav: 2px solid #3E2723;
+    
+    /* Footer */
+    --bg-footer: #455A64;     /* Azul oscuro viaje */
+    --color-footer: #FFF8E1;
+
+    /* Elementos */
+    --bg-input: #FFFFFF;
+    --color-input: #3E2723;
+    --bg-btn: #81D4FA;        /* Azul cielo brillante */
+    --color-btn: #000000;
+    
+    --borde-radio: 5px;       /* Bordes ligeramente redondeados (tarjeta) */
+}
+
+/* Tipografía estilo Pasaporte / Máquina de escribir */
+body {
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-image-container {
+    background-color: #81D4FA; /* Fondo cielo */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 3px solid #3E2723;
+    /* Patrón de fondo opcional (rayas sutiles) */
+    background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-blend-mode: overlay;
+}
+
+.cmiygl-cover-img {
+    width: 320px;
+    border-radius: 10px;
+    border: 3px solid #3E2723;
+    box-shadow: 10px 10px 0px rgba(62, 39, 35, 0.3);
+    transform: rotate(-2deg);
+}
+
+/* Sello de pasaporte decorativo */
+.passport-stamp {
+    position: absolute;
+    top: 20px;
+    right: 20%;
+    border: 3px solid #D32F2F;
+    color: #D32F2F;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    transform: rotate(-15deg);
+    opacity: 0.8;
+    font-size: 1.2rem;
+    pointer-events: none; /* Para que no moleste al click */
+}
+
+.cmiygl-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.host-credit {
+    background-color: #000000;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: bold;
+    transform: skewX(-10deg);
+    margin-bottom: 20px;
+}
+
+/* Tabla estilo Manifiesto de Vuelo */
+.cmiygl-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #3E2723;
+    background-color: #FFFFFF;
+}
+
+.cmiygl-table th {
+    background-color: #90A4AE;
+    color: #FFFFFF;
+    padding: 15px;
+    border-bottom: 2px solid #3E2723;
+    text-align: left;
+}
+
+.cmiygl-table td {
+    padding: 12px;
+    border-bottom: 1px dashed #B0BEC5; /* Línea punteada de documento */
+    text-align: left;
+}
+
+.cmiygl-table tr:last-child td {
+    border-bottom: none;
+}
+
+.cmiygl-table tr:hover td {
+    background-color: #E1F5FE;
+}
+
+/* Fondo decorativo para textos */
+.passport-bg {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #B0BEC5;
+    box-shadow: 5px 5px 0px #E0E0E0;
+    margin-top: 20px;
+}
+
+/* Botón estilo etiqueta de maleta */
+footer button {
+    border: 2px dashed #3E2723;
+    font-weight: 900;
+}

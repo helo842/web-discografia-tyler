@@ -1,0 +1,90 @@
+/* =========================================
+   ESTILO ESPECÍFICO: FLOWER BOY
+   ========================================= */
+
+:root {
+    /* Paleta Atardecer / Girasol */
+    --bg-body: #FFD27F;       /* Amarillo anaranjado suave */
+    --color-texto: #4A3B2A;   /* Marrón tierra */
+
+    /* Header */
+    --bg-header: #FFA500;     /* Naranja vibrante */
+    --color-header: #FFFFFF;
+
+    /* Navegación */
+    --bg-nav: #8CB8C4;        /* Azul cielo */
+    --color-nav: #FFFFFF;
+    
+    /* Footer */
+    --bg-footer: #4A5D23;     /* Verde césped */
+    --color-footer: #FFD700;  /* Amarillo abeja */
+
+    /* Inputs */
+    --bg-input: #FFF8E7;
+    --color-input: #4A3B2A;
+    --bg-btn: #FFA500;
+    --color-btn: #FFFFFF;
+
+    --borde-radio: 30px;      /* Bordes muy redondos */
+}
+
+.hero-image-container {
+    background-color: var(--bg-nav); /* Cielo de fondo */
+    padding: 40px;
+    text-align: center;
+}
+
+.flower-cover-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
+
+.flower-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.flower-section h2 {
+    color: #E67E22;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.flower-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Separación entre filas */
+}
+
+.flower-table th {
+    text-align: left;
+    color: #4A5D23;
+    padding: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #E67E22;
+}
+
+.flower-table td {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.flower-table tr:hover td {
+    background-color: #FFF8E7;
+    transform: scale(1.01);
+    transition: transform 0.2s;
+}
+
+/* Decoración extra para Flower Boy: Abejita */
+.flower-section::before {
+    content: "🐝";
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}

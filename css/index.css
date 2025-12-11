@@ -1,0 +1,131 @@
+/* =========================================
+   ESTILO ESPECÍFICO: HOME (index.css)
+   ========================================= */
+
+/* Nota: Los colores base ya vienen definidos por defecto en global.css */
+
+/* === ESTRUCTURA PRINCIPAL (Home Layout) === */
+main {
+    display: flex;          
+    flex-direction: row;    
+    width: 100%;
+}
+
+/* Imagen específica del perfil */
+.foto-sonriendo {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 4px solid #3E2723;
+    border-radius: 12px;
+}
+
+/* Columna Izquierda (Contenido) */
+article {
+    background-color: #ffffff; /* Blanco específico del diseño Home */
+    color: #3E2723;
+    padding: 40px;
+    flex: 2; /* Ocupa 2/3 */
+    text-align: justify;
+}
+
+/* Estilo para la caja del video destacado */
+.video-destacado {
+    background-color: #3E2723;
+    color: #FFF5E1;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 15px;
+    border: 4px solid #F4C2C2;
+    text-align: center;
+}
+
+.video-destacado h2 {
+    color: #FFF5E1;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.video-destacado p {
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* Columna Derecha (Barra Lateral) */
+aside {
+    background-color: #B2D8B2; /* Verde específico del sidebar */
+    color: #3E2723;
+    padding: 40px;
+    flex: 1; /* Ocupa 1/3 */
+}
+
+/* Efecto hover específico para el título en header */
+.link-home:hover h1 {
+    opacity: 0.8;
+}
+
+/* === BOTONES DEL SIDEBAR (Marcas) === */
+.links-marcas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-golf, .btn-fleur {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 25px; /* Píldora */
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px solid #3E2723;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.btn-golf { 
+    background-color: #F4C2C2; 
+    color: #3E2723;
+}
+
+.btn-fleur { 
+    background-color: #FFF5E1; 
+    color: #3E2723;
+}
+
+.btn-golf:hover, .btn-fleur:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 0px #3E2723;
+}
+
+/* Redes Sociales*/
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-social {
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #3E2723;
+    transition: transform 0.2s;
+}
+
+.btn-social:hover {
+    transform: translateX(5px); /* Efecto de moverse a la derecha */
+}
+
+/* Colores específicos de cada red */
+.insta { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+.twitter { background-color: #1DA1F2; }
+.youtube { background-color: #FF0000; }
